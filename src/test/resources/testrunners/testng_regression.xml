@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TN Test automtion regression suite" parallel="tests"
+	thread-count="6">
+
+	<listeners>
+		<listener
+			class-name="com.qa.avaamo.testlisteners.ExtentReportListener" />
+	</listeners>
+
+	<test name="HomePage Test_chrome_90">
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="90" />
+		<classes>
+			<class name="com.qa.avaamo.tests.HomePageTest" />
+		</classes>
+	</test>
+	
+</suite>
