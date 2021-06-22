@@ -8,11 +8,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.qa.avaamo.features.HomePage;
+import com.qa.avaamo.features.IffcoTokioBuyPage;
 
 public class BaseTest {
 	
 	public BasePage basePage;
 	public HomePage homePage;
+	public IffcoTokioBuyPage iffcoTokioBuyPage;
 
 	public Properties prop;
 	public WebDriver driver;

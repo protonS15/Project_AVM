@@ -10,7 +10,9 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -24,6 +26,8 @@ public class BasePage {
 	public Properties prop;
 	public OptionsManager optionsManager;
 	public static String highlight;
+	
+	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
 	/**
 	 * This method is used to initialize the browser on the basis of given
@@ -35,7 +39,7 @@ public class BasePage {
 	public WebDriver init_driver(String browser, String browserVersion) {
 		System.out.println("browser value is : " + browser);
 
-		highlight = prop.getProperty("highilight");
+		highlight = prop.getProperty("highlight");
 		optionsManager = new OptionsManager(prop);
 
 		if (browser.equalsIgnoreCase("chrome")) {
@@ -43,7 +47,9 @@ public class BasePage {
 
 			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 				init_remoteDriver("chrome", browserVersion);
-			} 
+			} else {
+				tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+			}
 
 		}
 
@@ -52,16 +58,18 @@ public class BasePage {
 
 			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 				init_remoteDriver("firefox", browserVersion);
-			} 
+			} else {
+				tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+			}
 		}
 
 		else {
 			System.out.println("Please pass the correct browser value : " + browser);
 		}
 
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		return driver;
+		getDriver().manage().deleteAllCookies();
+		getDriver().manage().window().maximize();
+		return getDriver();
 	}
 
 	private void init_remoteDriver(String browser, String browserVersion) {
@@ -82,6 +90,13 @@ public class BasePage {
 
 		}
 
+	}
+	
+	/**
+	 * getDriver using ThreadLocal
+	 */
+	public static synchronized WebDriver getDriver() {
+		return tlDriver.get();
 	}
 
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TN Test automtion regression suite" duration-ms="106156" started-at="2021-06-22T13:37:40Z" finished-at="2021-06-22T13:39:26Z">
+    <groups>
+    </groups>
+    <test name="HomePage Test_chrome_90" duration-ms="106156" started-at="2021-06-22T13:37:40Z" finished-at="2021-06-22T13:39:26Z">
+      <class name="com.qa.avaamo.tests.HomePageTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.qa.avaamo.tests.HomePageTest@25bbf683]" name="setUp" is-config="true" duration-ms="7172" started-at="2021-06-22T13:37:40Z" finished-at="2021-06-22T13:37:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[91]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.avaamo.tests.HomePageTest@25bbf683]" name="verifyHomePageTitleTest" duration-ms="28" started-at="2021-06-22T13:37:48Z" finished-at="2021-06-22T13:37:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageTitleTest -->
+        <test-method status="PASS" signature="verifyNotificationTextTest()[pri:2, instance:com.qa.avaamo.tests.HomePageTest@25bbf683]" name="verifyNotificationTextTest" duration-ms="1030" started-at="2021-06-22T13:37:48Z" finished-at="2021-06-22T13:37:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNotificationTextTest -->
+        <test-method status="PASS" signature="verifyBotLoadedTest()[pri:3, instance:com.qa.avaamo.tests.HomePageTest@25bbf683]" name="verifyBotLoadedTest" duration-ms="19394" started-at="2021-06-22T13:37:49Z" finished-at="2021-06-22T13:38:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBotLoadedTest -->
+        <test-method status="PASS" signature="verifyStartOverMenuOptionActionsTest()[pri:4, instance:com.qa.avaamo.tests.HomePageTest@25bbf683]" name="verifyStartOverMenuOptionActionsTest" duration-ms="39626" started-at="2021-06-22T13:38:08Z" finished-at="2021-06-22T13:38:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStartOverMenuOptionActionsTest -->
+        <test-method status="PASS" signature="verifySubmitTestBotFormTest()[pri:5, instance:com.qa.avaamo.tests.HomePageTest@25bbf683]" name="verifySubmitTestBotFormTest" duration-ms="38713" started-at="2021-06-22T13:38:48Z" finished-at="2021-06-22T13:39:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitTestBotFormTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.avaamo.tests.HomePageTest@25bbf683]" name="tearDown" is-config="true" duration-ms="162" started-at="2021-06-22T13:39:26Z" finished-at="2021-06-22T13:39:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.avaamo.tests.HomePageTest -->
+    </test> <!-- HomePage Test_chrome_90 -->
+  </suite> <!-- TN Test automtion regression suite -->
+</testng-results>

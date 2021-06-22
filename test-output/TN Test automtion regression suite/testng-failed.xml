@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TN Test automtion regression suite]">
+  <test thread-count="5" name="HomePage Test_chrome_90(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="version" value="91"/>
+    <classes>
+      <class name="com.qa.avaamo.tests.HomePageTest">
+        <methods>
+          <include name="verifyNotificationTextTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.avaamo.tests.HomePageTest -->
+    </classes>
+  </test> <!-- HomePage Test_chrome_90(failed) -->
+</suite> <!-- Failed suite [TN Test automtion regression suite] -->

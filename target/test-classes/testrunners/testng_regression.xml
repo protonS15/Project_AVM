@@ -11,10 +11,10 @@
 
 	<test name="HomePage Test_chrome_90">
 		<parameter name="browser" value="chrome" />
-		<parameter name="version" value="90" />
+		<parameter name="version" value="91" />
 		<classes>
-			<class name="com.qa.avaamo.tests.HomePageTest" />
+ 			<class name="com.qa.avaamo.tests.HomePageTest" />
 		</classes>
 	</test>
-	
+
 </suite>

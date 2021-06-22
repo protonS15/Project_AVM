@@ -139,8 +139,8 @@ public class ElementUtil {
 
 			String text = e.getText();
 
-			if (text.equals(value)) {
-				e.click();
+			if (text.equalsIgnoreCase(value)) {
+				jsUtil.clickElementByJS(e);
 				break;
 			}
 
